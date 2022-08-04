@@ -7,6 +7,7 @@ import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import CommentApp from '../components/CommentApp';
 import Alert from '@mui/material/Alert';
+import CarouselHead from '../components/CarouselHead';
 
 
 const NewsHome = () => {
@@ -50,7 +51,7 @@ const NewsHome = () => {
             flexDirection: 'column',
             mt: 5,mb:10
         }}>
-            {/* <CarouselHead></CarouselHead> */}
+            <CarouselHead></CarouselHead>
             <Box sx={{
                 mt: 5,
                 display: 'flex',

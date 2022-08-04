@@ -104,8 +104,8 @@ const ResponsiveAppBar = () => {
     let lowerCase = e.target.value.toLowerCase();
     let keyword = lowerCase.replace(" ","+")
     setInputText(keyword);
-    //navigate(`/search/${keyword}`);
-    console.log(keyword);
+    navigate(`/search/${keyword}`);
+    
   }
 
   const onLogout = async () => {
