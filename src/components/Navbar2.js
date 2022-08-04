@@ -8,13 +8,10 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { Search } from '@mui/icons-material';
+import { Link, useNavigate } from 'react-router-dom';
 import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
@@ -99,14 +96,24 @@ const ResponsiveAppBar = () => {
   
 
   const [inputText, setInputText] = React.useState("");
+  
   const searchHandler = (e) => {
     //convert input text to lower case
-    let lowerCase = e.target.value.toLowerCase();
+    var lowerCase = e.target.value.toLowerCase();
     let keyword = lowerCase.replace(" ","+")
     setInputText(keyword);
     navigate(`/search/${keyword}`);
+    console.log(keyword);
+    
+    
     
   }
+
+
+
+  // const nav = (e) =>{
+  //   navigate(`/search/`+ e);
+  // } 
 
   const onLogout = async () => {
     try {
@@ -117,8 +124,9 @@ const ResponsiveAppBar = () => {
     }
   };
 
+  
   return (
-    <AppBar position="static" sx = {{ background: '#101437' }}>
+    <AppBar component="nav" position="static" sx = {{ background: '#101437' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
         <AnalyticsIcon sx={{ display: 'flex', mr: 1 }} />

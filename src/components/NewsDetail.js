@@ -52,7 +52,7 @@ const NewsDetail = () => {
 
   return (
     <div>
-    <SpinnerFull></SpinnerFull>    
+       
     <Grid
       container
       spacing={0}

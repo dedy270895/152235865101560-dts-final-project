@@ -14,7 +14,6 @@ const MovieFinded = () => {
     const [countPage, setCountPage] = useState(1)
     const params = useParams();
     const key = params?.movie ;
-    const url = 'search/movie?query=' + key;
 
     
 
@@ -36,7 +35,7 @@ const MovieFinded = () => {
         }
 
         fetchNews();
-    }, [url,page]);
+    }, [page,key]);
 
 
     const handleChange = (event, value) => {
